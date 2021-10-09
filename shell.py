@@ -6,9 +6,11 @@ def shellSort(arr):
         while j < len(arr):
             if arr[i] >arr[j]:
                 arr[i],arr[j] = arr[j],arr[i]
+            
             i += 1
             j += 1
             k = i
+
             while k - gap > -1:
                 if arr[k - gap] > arr[k]:
                     arr[k-gap],arr[k] = arr[k],arr[k-gap]

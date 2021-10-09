@@ -7,8 +7,6 @@ def bubbleSort(arr):
             if arr[j] > arr[j+1] :
                 arr[j], arr[j+1] = arr[j+1], arr[j]
 
-
-# Reading input txt
 while (True):
     arr = []
     line = input()

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std; 
  
 void swap(int* a, int* b){ 
@@ -7,7 +8,7 @@ void swap(int* a, int* b){
     *b = t; 
 } 
   
-int partition (int arr[], int low, int high){ 
+int partition (vector<int> &arr, int low, int high){ 
     int pivot = arr[high];
     int i = (low - 1);
     for (int j = low; j <= high - 1; j++){
@@ -20,7 +21,7 @@ int partition (int arr[], int low, int high){
     return (i + 1); 
 } 
 
-void quickSort(int arr[], int low, int high){
+void quickSort(vector<int> &arr, int low, int high){
     if (low < high){
         int pi = partition(arr, low, high); 
         quickSort(arr, low, pi - 1); 
@@ -28,7 +29,7 @@ void quickSort(int arr[], int low, int high){
     } 
 } 
 
-void printArray(int arr[], int size) {
+void printArray(vector<int> &arr, int size) {
     int i; 
     for (i = 0; i < size; i++) 
         cout << arr[i] << " "; 
@@ -36,10 +37,9 @@ void printArray(int arr[], int size) {
 } 
 
 int main() {
-    int arr[] = {10, 7, 8, 9, 1, 5}; 
-    int n = sizeof(arr) / sizeof(arr[0]); 
-    quickSort(arr, 0, n - 1); 
+    vector<int> arr {10, 7, 8, 9, 1, 5}; 
+    quickSort(arr, 0, arr.size() - 1); 
     cout << "Sorted array: \n"; 
-    printArray(arr, n); 
+    printArray(arr, arr.size()); 
     return 0; 
 }

@@ -14,12 +14,12 @@ int shellSort(vector<int> &arr, int n){
     }
     return 0;
 }
- 
+
 void printArray(vector<int> &arr, int n){
     for (int i=0; i<n; i++)
         cout << arr[i] << " ";
 }
- 
+
 int main(){
     vector<int> arr {12, 34, 54, 2, 3};
     int i;

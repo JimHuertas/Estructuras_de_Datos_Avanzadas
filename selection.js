@@ -21,9 +21,3 @@ function printArray(arr,  size){
         document.write(arr[i] + " ");
     document.write(" <br>");
 }
- 
-var arr = [64, 25, 12, 22, 11];
-var n = 5;
-selectionSort(arr, n);
-document.write("Sorted array: <br>");
-printArray(arr, n);
